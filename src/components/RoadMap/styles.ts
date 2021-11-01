@@ -74,7 +74,7 @@ export const ContentWrapper = styled("div")`
 export const ImageWrapper = styled("div")`
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 200%;
   position: absolute;
   overflow: hidden;
 }
