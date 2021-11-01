@@ -74,7 +74,7 @@ export const ContentWrapper = styled("div")`
 export const ImageWrapper = styled("div")`
   top: 0;
   width: 100%;
-  height: 200%;
+  height: 100%;
   position: absolute;
   overflow: hidden;
 }
@@ -97,7 +97,7 @@ export const WixBgMediaWrapper = styled("div")`
 
 export const AboutImage = styled("img")`
   width: 100%;
-  height: 100%;
+  height: 200%;
   object-fit: fill;
   object-position: 50% 50%;
 `;

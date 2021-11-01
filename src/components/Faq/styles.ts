@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TotalContainer = styled("section")`
   position: relative;
-  padding: 0rem 0 8rem;
+  padding: 8rem 0 8rem;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
@@ -81,7 +81,8 @@ export const WixBgMediaWrapper = styled("div")`
 
 export const AboutImage = styled("img")`
   width: 100%;
-  height: 712px;
-  object-fit: cover;
+  height: 90%;
+
+  object-fit: fill;
   object-position: 50% 50%;
 `;

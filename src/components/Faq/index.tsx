@@ -25,7 +25,7 @@ const Faq = (props: any) => {
         <WixBgMediaWrapper style={{ opacity: 1 }}>
           <WixBgMedia
             style={{
-              transform: "translate3d(0px, 0px, " + props.transform + "px)",
+              transform: "translate3d(" + (props.transform - 100) +  "px, 0px, 0px)",
             }}
           >
             <AboutImage src="img/webp/faq.webp" alt="back.jpg" />
@@ -75,6 +75,7 @@ const Faq = (props: any) => {
                 </p>
               </Panel>
             </Collapse>
+            ,
           </ContentWrapper>
         </Col>
       </Row>

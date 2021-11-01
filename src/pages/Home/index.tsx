@@ -13,7 +13,7 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const aboutPosition = 600;
 const featurePosition = 1700;
 const roadMapPosition = 2800;
-
+const faqPosition = 4400;
 const Home = () => {
   const [aboutTransform, setAboutTransform] = useState(0);
   const [featureTransform, setFeatureTransform] = useState(0);
@@ -31,6 +31,10 @@ const Home = () => {
       itemTranslate = Math.max( -700, (window.pageYOffset - roadMapPosition ));
       itemTranslate = Math.min(700, itemTranslate);
       setRoadMapTransform(itemTranslate);
+
+      itemTranslate = Math.min( 400, (faqPosition - window.pageYOffset )/3);
+      itemTranslate = Math.max( 0, itemTranslate);
+      setFaqTransform(itemTranslate);
 
       
     };
