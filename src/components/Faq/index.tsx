@@ -75,7 +75,6 @@ const Faq = (props: any) => {
                 </p>
               </Panel>
             </Collapse>
-            ,
           </ContentWrapper>
         </Col>
       </Row>
