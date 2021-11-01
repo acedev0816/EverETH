@@ -12,11 +12,12 @@ const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 
 const aboutPosition = 600;
 const featurePosition = 1700;
+const roadMapPosition = 2800;
 
 const Home = () => {
   const [aboutTransform, setAboutTransform] = useState(0);
   const [featureTransform, setFeatureTransform] = useState(0);
-  const [roadMapTransform, setRoadMapTransform] = useState(0);
+  const [roadMapTransform, setRoadMapTransform] = useState(-700);
   const [faqTransform, setFaqTransform] = useState(0);
   useEffect(() => {
     window.onscroll = () => {
@@ -27,6 +28,10 @@ const Home = () => {
       itemTranslate = Math.max(0, (window.pageYOffset - featurePosition) / 20);
       itemTranslate = Math.min(40, itemTranslate);
       setFeatureTransform(itemTranslate);
+      itemTranslate = Math.max( -700, (window.pageYOffset - roadMapPosition ));
+      itemTranslate = Math.min(700, itemTranslate);
+      setRoadMapTransform(itemTranslate);
+
       
     };
   }, []);

@@ -38,7 +38,7 @@ const RoadMap = (props: any) => {
       <ImageWrapper>
         <WixBgMediaWrapper style={{ opacity: 1 }}>
           <WixBgMedia
-            style={{ transform: "translate3d(0px, 0px, " + props.transform + "px)" }}
+            style={{ transform: "translate3d(0px, " + props.transform + "px, 0px)" }}
           >
             <AboutImage src="img/webp/roadmap.webp" alt="back.jpg" />
           </WixBgMedia>

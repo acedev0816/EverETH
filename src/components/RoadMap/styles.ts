@@ -97,7 +97,7 @@ export const WixBgMediaWrapper = styled("div")`
 
 export const AboutImage = styled("img")`
   width: 100%;
-  height: 712px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: fill;
   object-position: 50% 50%;
 `;
