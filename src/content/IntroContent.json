@@ -1,13 +1,13 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "HOLD EVERETH EARN ETHEREUM",
+  "text": "The fastest and easiest way to earn Ethereum.",
   "button": [
     {
-      "title": "Explore"
+      "title": "Buy on EverETH Swap"
+      
     },
     {
-      "title": "Learn more",
-      "color": "#fff"
+      "title": "Dashboard"
     }
   ]
 }

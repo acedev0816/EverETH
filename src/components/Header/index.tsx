@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Row, Col, Drawer } from "antd";
+import { Row, Col, Drawer, Image, Typography } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -11,10 +11,13 @@ import {
   NotHidden,
   Menu,
   CustomNavLinkSmall,
+  MenuWrapper,
   Label,
   Outline,
   Span,
 } from "./styles";
+
+const { Title } = Typography;
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -37,21 +40,32 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall>
+        <MenuWrapper>
+          <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+            <Span>{t("About")}</Span>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
+            <Span>{t("Features")}</Span>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+            <Span>{t("RoadMap")}</Span>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+            <Span>{t("Contact")}</Span>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+            <Span>{t("FAQ")}</Span>
+          </CustomNavLinkSmall>
+          <CustomNavLinkSmall onClick={() => scrollTo("product")}>
+            <Span>{t("Audit")}</Span>
+          </CustomNavLinkSmall>
+        </MenuWrapper>
         <CustomNavLinkSmall
-          style={{ width: "180px" }}
+          style={{ width: "150px", marginTop:"0px" }}
           onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <Button color="#188ba3">{t("EverETH.app")}</Button>
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -63,10 +77,14 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <Image src="img/logo.png" preview={false} />
+            <div>
+              <Title level={4} >EverETH</Title>
+              <Title level={5}>Earn Ethereum</Title>
+            </div>
           </LogoContainer>
           <NotHidden>
-            <MenuItem />
+            <MenuItem/>
           </NotHidden>
           <Burger onClick={showDrawer}>
             <Outline />

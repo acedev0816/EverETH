@@ -8,11 +8,17 @@ export const HeaderSection = styled("header")`
   .ant-row-space-between {
     align-items: center;
     text-align: center;
+
   }
 `;
 
 export const LogoContainer = styled(Link)`
   display: flex;
+  h4,h5,h6 {
+    margin:0px!important;
+    text-align: left;
+    color: white;
+  }
 `;
 
 export const NavLink = styled("div")`
@@ -58,6 +64,8 @@ export const NotHidden = styled("div")`
   @media only screen and (max-width: 890px) {
     display: none;
   }
+  display: flex;
+  align-items: center;
 `;
 
 export const Menu = styled("h5")`
@@ -67,11 +75,10 @@ export const Menu = styled("h5")`
 `;
 
 export const CustomNavLinkSmall = styled(NavLink)`
-  font-size: 1.2rem;
-  color: #18216d;
+  font-size: 1rem;
+  color: white;
   transition: color 0.2s ease-in;
-  margin: 0.5rem 2rem;
-
+  margin: 0.6rem 1rem;
   @media only screen and (max-width: 768px) {
     margin: 1.25rem 2rem;
   }
@@ -97,8 +104,18 @@ export const Span = styled("span")`
   &:hover,
   &:active,
   &:focus {
-    color: rgb(255, 130, 92);
+    color: rgb(150, 105, 209);
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
+
+export const MenuWrapper = styled("div")`
+  background:#212226;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0px 20px;
+  
+`;
+

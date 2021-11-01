@@ -1,61 +1,45 @@
-import { lazy } from "react";
-import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
-import ContactContent from "../../content/ContactContent.json";
+import { lazy, useState, useEffect } from "react";
 
-const Contact = lazy(() => import("../../components/ContactForm"));
-const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
+import Introduction from "../../components/Introduction";
+import About from "../../components/About";
+import HowToBuy from "../../components/HowToBuy";
+import Feature from "../../components/Feature";
+import RoadMap from "../../components/RoadMap";
+import Faq from "../../components/Faq";
+
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
-const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+
+const aboutPosition = 600;
+const featurePosition = 1700;
 
 const Home = () => {
+  const [aboutTransform, setAboutTransform] = useState(0);
+  const [featureTransform, setFeatureTransform] = useState(0);
+  const [roadMapTransform, setRoadMapTransform] = useState(0);
+  const [faqTransform, setFaqTransform] = useState(0);
+  useEffect(() => {
+    window.onscroll = () => {
+      console.log(window.pageYOffset);
+      let itemTranslate = Math.max(0, (window.pageYOffset - aboutPosition) / 20);
+      itemTranslate = Math.min(70, itemTranslate);
+      setAboutTransform(itemTranslate);
+      itemTranslate = Math.max(0, (window.pageYOffset - featurePosition) / 20);
+      itemTranslate = Math.min(40, itemTranslate);
+      setFeatureTransform(itemTranslate);
+      
+    };
+  }, []);
+
   return (
     <Container>
       <ScrollToTop />
-      <ContentBlock
-        type="right"
-        title={IntroContent.title}
-        content={IntroContent.text}
-        button={IntroContent.button}
-        icon="developer.svg"
-        id="intro"
-      />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
-      <ContentBlock
-        type="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
-        icon="graphs.svg"
-        id="about"
-      />
-      <ContentBlock
-        type="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
-      />
-      <ContentBlock
-        type="left"
-        title={ProductContent.title}
-        content={ProductContent.text}
-        icon="waving.svg"
-        id="product"
-      />
-      <Contact
-        title={ContactContent.title}
-        content={ContactContent.text}
-        id="contact"
-      />
+      <Introduction />
+      <About transform={aboutTransform}/>
+      <Feature transform={featureTransform}/>
+      <RoadMap transform={roadMapTransform}/>
+      <Faq transform={faqTransform}/>
+      <HowToBuy />
     </Container>
   );
 };
