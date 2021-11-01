@@ -33,7 +33,7 @@ const Introduction = () => {
               <Content style={{ color: "white" }}>{IntroContent.text}</Content>
               <ButtonWrapper>
                 <Button fixedWidth={true}>Buy on EverETH Swap</Button>
-                <Button color="#188ba3" fixedWidth={true}>
+                <Button color="#188ba3" padding="15px 15px" >
                   Dashboard
                 </Button>
               </ButtonWrapper>

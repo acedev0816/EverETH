@@ -5,7 +5,7 @@ export const StyledContainer = styled("div")<any>`
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding: 0 60px;
+  padding: 0 0px;
   border-top: ${(p) => (p.border ? "1px solid #CDD1D4" : "")};
 
   @media only screen and (max-width: 1024px) {

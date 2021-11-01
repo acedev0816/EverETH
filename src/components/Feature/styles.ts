@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const TotalContainer = styled("section")`
   position: relative;
-  padding: 1rem 0 1rem;
+  padding: 1rem 0 1rem 1rem;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }

@@ -8,6 +8,7 @@ export const StyledButton = styled("button")<any>`
   border: none;
   border-radius: 20px;
   padding: 8px 0;
+  padding: ${(p) => p||"8px 0"};
   cursor: pointer;
   margin-top: 0.625rem;
   max-width: 200px;

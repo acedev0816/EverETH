@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const IntroductionContainer = styled("section")`
   position: relative;
-  padding: 10rem 0 8rem;
+  padding: 11rem 0rem 8rem 1rem;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
@@ -69,7 +69,8 @@ export const WalletWrapper = styled("div")`
   margin-top:10px;
   color:white;
   justify-content:center;
-  background: #fff3;
+  background: #fff2;
+  border:1px solid #666;
   padding:10px;
   border-radius:20px;
 
@@ -133,5 +134,8 @@ export const StickyWrapper = styled("div")`
   img{
     width:30px;
     height:30px;
+    margin-top:7px;
+
   }
+  z-index:1000;
   `;

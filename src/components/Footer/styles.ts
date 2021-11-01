@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterSection = styled("footer")`
   background:#242834;
-  padding: 2.5rem 0;
+  padding: 2.5rem 0 0 1rem;
 `;
 
 export const Title = styled("h4")`

@@ -8,6 +8,7 @@ export interface ButtonProps {
   fixedWidth?: boolean;
   name?: string;
   children: React.ReactNode;
+  padding?: string;
   onClick?: () => void;
 }
 
