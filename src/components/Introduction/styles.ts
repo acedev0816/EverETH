@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const IntroductionContainer = styled("section")`
   position: relative;
-  padding: 11rem 0rem 8rem 1rem;
+  padding: 4rem 0rem 8rem 1rem;
   @media only screen and (max-width: 1024px) {
     padding: 8rem 0 6rem;
   }
@@ -13,8 +13,7 @@ export const IntroductionContainer = styled("section")`
   }
   @media screen and (min-width: 1024px){
     video{
-      padding-left:20vw;
-      margin-top:-100px;
+      padding-left:5rem;
     }
   }
   video{
@@ -24,6 +23,7 @@ export const IntroductionContainer = styled("section")`
     width:100%;
     height: 100%;
     z-index: -1;
+    object-fit:cover;
 
   }
 `;
